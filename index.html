@@ -1,24 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <!-- 页面标题及元数据 -->
-    <title>Authenticity to Sale</title>
-    <meta name="description" content="A Multimethod Investigation of Predictive AI, Generative AI and Experiments">
+    <title>To Authenticity to Sale</title>
+    <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="keywords" content="AI, authenticity, predictive AI, generative AI, experiments">
+    <meta name="keywords" content="">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- 外部样式表 -->
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    
+
     <!-- 脚本引入 -->
     <script src="js/uikit.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/script.js"></script>
-
     <!-- 内部样式，用于导航栏与响应式设计 -->
     <style>
         /* 导航栏样式 */
@@ -26,19 +26,12 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            margin: 60px auto 0;
-            padding: 0;
+            margin-top: 60px;
+            padding-left: 0;
             list-style: none;
             width: 100%;
-            max-width: 800px;
         }
-        
-        .nav-item {
-            flex: 0 0 auto;
-            text-align: center;
-        }
-        
+
         .nav-link {
             display: block;
             padding: 0.5rem 3rem;
@@ -47,408 +40,157 @@
             text-decoration: none;
             background-color: transparent;
         }
-        
+
         .nav-link:hover {
             color: #0056b3;
             text-decoration: none;
         }
-
         /* 响应式设计 */
         @media screen and (max-width: 768px) {
             .large-title p:nth-child(1) {
                 font-size: 26px !important;
             }
-            
+
             .large-title p:nth-child(2) {
                 font-size: 32px !important;
             }
-
             .mobile {
                 flex-direction: column;
             }
-
             .uk-width-1-2 {
                 width: 100% !important;
             }
-
             .container {
-                margin: 0 auto !important;
-                padding: 0 15px;
+                margin: 0 !important;
             }
         }
-
-        /* 视频及布局样式 */
+    </style>
+    <!-- 视频及布局样式 -->
+    <style>
+        /* 视频内容布局样式 */
         .col2 {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 40px;
-            gap: 20px;
-            flex-wrap: wrap;
         }
-        
-        .video {
-            flex: 1 1 45%;
-            max-width: 560px;
-            text-align: center;
-        }
-        
+
         .small-title {
-            display: block;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 10px 0;
             font-size: 21px;
         }
-
         /* 响应式视频布局 */
         @media screen and (max-width: 768px) {
             .col2 {
                 flex-direction: column;
-                align-items: center;
             }
-            
-            .video {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-        }
-
-        /* 标题和信息样式 */
-        .large-title, .info, h3, p, h5 {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1200px;
-        }
-
-        h3 {
-            font-weight: bold;
-            font-size: 30px;
-        }
-
-        .info {
-            margin-bottom: 20px;
-        }
-
-        .item {
-            text-align: left;
-            display: inline-block;
-            margin: 5px 0;
-        }
-
-        .banner {
-            background-color: #fff;
-            padding-bottom: 26px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* 返回顶部按钮 */
-        .totop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
         }
     </style>
 </head>
-
 <body oncontextmenu="self.event.returnValue=false">
     <!-- 导航栏 -->
-    <nav class="uk-navbar-container uk-margin" uk-navbar uk-sticky>
-        <div class="uk-container uk-container-center">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a href="https://github.com/multimodal-authenticity/multimodal-authenticity" class="nav-link">
-                        <svg style="width:68px;height:68px" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                        </svg><br>
-                        <strong>Code</strong>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://drive.google.com/drive/folders/1obcRpOnTbqu2M0_orEyzQHelAOyivFjw" class="nav-link">
-                        <svg style="width:68px;height:68px" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" />
-                        </svg><br>
-                        <strong>Dataset</strong>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <nav class="uk-navbar-container uk-margin" uk-navbar uk-sticky></nav>
     <!-- 主要内容区域 -->
-    <div class="banner">
+    <div class="banner" style="background-color:#fff; padding-bottom:26px">
         <div class="uk-container uk-container-center container">
             <!-- 标题部分 -->
             <div class="large-title">
-                <p style="font-size: 48px;">To Authenticity to Sale:</p>
-                <p style="margin: 0; font-size: 30px;">A Multimethod Investigation of Predictive AI, Generative AI and Experiments</p>
+                <p style="font-size: 48px; text-align: center;">To Authenticity to Sale:</p>
+                <p style="margin: 0; text-align: center; font-size: 30px;">A Multimethod Investigation of Predictive AI, Generative AI and Experiments</p>
             </div>
+            <!-- 代码和数据集链接部分 -->
+            <div class="links">
+                <ul class="nav">
+                    <!-- GitHub 代码链接 -->
+                    <li class="nav-item text-center">
+                        <a href="https://github.com/multimodal-authenticity/multimodal-authenticity" class="nav-link">
+                            <svg style="width:68px;height:68px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                            </svg><br>
+                            <strong>Code</strong>
+                        </a>
+                    </li>
+                    <!-- 数据集链接 -->
+                    <li class="nav-item text-center">
+                        <a href="https://drive.google.com/drive/folders/1obcRpOnTbqu2M0_orEyzQHelAOyivFjw" class="nav-link">
+                            <svg style="width:68px;height:68px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" />
+                            </svg><br>
+                            <strong>Dataset</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 多模态附件展示 -->
 
-            
- 
-	<!-- SAMPLE -->
-     
-
-    
-<h3 id="4" class="uk-margin-bottom uk-margin-medium-top" style="font-size: 30px;">1. Sample Videos</h3>
-
-<div class="video-container">
-    <div class="video">
-        <div id="player1"></div>  <!-- 第一个视频容器 -->
-        <div class="small-title uk-margin">(High empathy)</div>
-    </div>
-
-    <!-- low -->
-    <div class="video">
-        <div id="player2"></div>  <!-- 第二个视频容器 -->
-        <div class="small-title uk-margin">(Low empathy)</div>
-    </div>
-</div>
-
-<script>
-    var player1, player2;
-    
-    // YouTube Iframe API 会调用此函数
-    function onYouTubeIframeAPIReady() {
-        // 第一个视频播放器
-        player1 = new YT.Player('player1', {
-            height: '560',
-            width: '315',
-            videoId: 'pEoT62T31Ig',  // 高同理心视频 ID
-            playerVars: {
-                'autoplay': 0,  // 不自动播放，用户点击开始
-                'rel': 0,       // 禁止显示推荐视频
-                'showinfo': 0,  // 隐藏视频信息（标题、上传者等）
-                'controls': 1,  // 显示控制按钮
-                'modestbranding': 1  // 隐藏 YouTube 品牌标志
-            },
-            events: {
-                'onStateChange': onPlayerStateChange1  // 播放器状态变化时触发的事件
-            }
-        });
-
-        // 第二个视频播放器
-        player2 = new YT.Player('player2', {
-            height: '560',
-            width: '315',
-            videoId: 'xmNTz3crPTs',  // 低同理心视频 ID
-            playerVars: {
-                'autoplay': 0,  // 不自动播放，用户点击开始
-                'rel': 0,       // 禁止显示推荐视频
-                'showinfo': 0,  // 隐藏视频信息（标题、上传者等）
-                'controls': 1,  // 显示控制按钮
-                'modestbranding': 1  // 隐藏 YouTube 品牌标志
-            },
-            events: {
-                'onStateChange': onPlayerStateChange2  // 播放器状态变化时触发的事件
-            }
-        });
-    }
-
-    // 第一个视频播放器状态变化时的回调函数
-    function onPlayerStateChange1(event) {
-        if (event.data == YT.PlayerState.ENDED) {
-            player1.stopVideo();  // 停止视频
-            player1.seekTo(0);     // 回到视频封面（初始状态）
-        }
-    }
-
-    // 第二个视频播放器状态变化时的回调函数
-    function onPlayerStateChange2(event) {
-        if (event.data == YT.PlayerState.ENDED) {
-            player2.stopVideo();  // 停止视频
-            player2.seekTo(0);     // 回到视频封面（初始状态）
-        }
-    }
-</script>
-
-<!-- 加载 YouTube Iframe API -->
-<script src="https://www.youtube.com/iframe_api"></script>
-
-<!-- 添加CSS以使视频左右排版 -->
-<style>
-    .video-container {
-        display: flex;           /* 使用 Flexbox 实现水平排列 */
-        justify-content: space-between;  /* 在容器中均匀分布 */
-        gap: 20px;  /* 设置视频之间的间距 */
-    }
-
-    .video {
-        text-align: center;
-    }
-
-    .small-title {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #333;
-    }
-</style>
-
-
-
-    <script>
-        var player1, player2;
-        
-        // YouTube Iframe API 会调用此函数
-        function onYouTubeIframeAPIReady() {
-            // 第一个视频播放器
-            player1 = new YT.Player('player1', {
-                height: '560',
-                width: '315',
-                videoId: 'O0ylZpHdMN4',  // 高同理心视频 ID
-                playerVars: {
-                    'autoplay': 0,  // 不自动播放，用户点击开始
-                    'rel': 0,       // 禁止显示推荐视频
-                    'showinfo': 0,  // 隐藏视频信息（标题、上传者等）
-                    'controls': 1,  // 显示控制按钮
-                    'modestbranding': 1  // 隐藏 YouTube 品牌标志
-                },
-                events: {
-                    'onStateChange': onPlayerStateChange1  // 播放器状态变化时触发的事件
-                }
-            });
-    
-            // 第二个视频播放器
-            player2 = new YT.Player('player2', {
-                height: '560',
-                width: '315',
-                videoId: 'Z1W_k98IOJQ',  // 低同理心视频 ID
-                playerVars: {
-                    'autoplay': 0,  // 不自动播放，用户点击开始
-                    'rel': 0,       // 禁止显示推荐视频
-                    'showinfo': 0,  // 隐藏视频信息（标题、上传者等）
-                    'controls': 1,  // 显示控制按钮
-                    'modestbranding': 1  // 隐藏 YouTube 品牌标志
-                },
-                events: {
-                    'onStateChange': onPlayerStateChange2  // 播放器状态变化时触发的事件
-                }
-            });
-        }
-    
-        // 第一个视频播放器状态变化时的回调函数
-        function onPlayerStateChange1(event) {
-            if (event.data == YT.PlayerState.ENDED) {
-                player1.stopVideo();  // 停止视频
-                player1.seekTo(0);     // 回到视频封面（初始状态）
-                player1.playVideoAt(0);  // 确保不会自动播放
-            }
-        }
-    
-        // 第二个视频播放器状态变化时的回调函数
-        function onPlayerStateChange2(event) {
-            if (event.data == YT.PlayerState.ENDED) {
-                player2.stopVideo();  // 停止视频
-                player2.seekTo(0);     // 回到视频封面（初始状态）
-                player1.playVideoAt(0);  // 确保不会自动播放
-            }
-        }
-    </script>
-    
-    <!-- 加载 YouTube Iframe API -->
-    <script src="https://www.youtube.com/iframe_api"></script>
-
-</div>
-
-
-<style>
-    .small-title {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 30 px; /* Set the font size to 12 */
-        color: black; /* Set the font color to black */
-        font-family: 'Times New Roman', Times, serif; /* Set the font to Times New Roman */
-    }
-
-    .col2 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .video {
-        text-align: center;
-    }
-
-    .uk-margin {
-        margin-bottom: 15px;
-    }
-</style>
-     
-
-            
-   <!-- 2. Text Features (Word Cloud)  -->
-
- 
-
-<h3 id="4" class="uk-margin-bottom uk-margin-medium-top"  style="font-size: 30px;">2. Text Features (Word Cloud)</h3>
-    
-<div class="uk-grid-small" uk-grid>
-    <div class="uk-width-1-1" uk-lightbox="animation: slide">
-        <div class="image-container">
-            <a href="media/text_plot.png" data-caption=""><img  src="media/text_plot.png" alt=""></a>
-            
-        </div>
-    </div>
-</div>
-
- 
-
-
-      <div class="uk-container uk-container-center container uk-margin-bottom uk-margin-medium-top">  
-            <!-- 3. Audio Features  -->
-        <h3 id="4" class="uk-margin-bottom uk-margin-medium-top"  style="font-size: 30px;">3. Audio Features (Covarep)</h3>
-          
-        <div class="uk-grid-small" uk-grid>
-            <div class="uk-width-1-1" uk-lightbox="animation: slide">
-                <div class="image-container">
-                    <a href="media/audio_plot.png" data-caption=""><img  src="media/audio_plot.png" alt=""></a>
-                    
+               <h3 id="sample-videos" class="uk-margin-bottom uk-margin-medium-top">1. Sample Videos</h3>
+            <div class="col2">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/NuyD4kjXUFQ?rel=0&si=jdn67QVPrLnHULom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="small-title">(High Authenticity)</div>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/LGyaiRyYHt0?rel=0&si=L2LBvQ_aXtXJZaAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="small-title">(Low Authenticity)</div>
                 </div>
             </div>
-        </div>
 
-
-        <div class="audio">
-            <audio controls=""><source src="media/high empathy case.mp3" type="audio/mpeg" controlslist="nodownload">您的浏览器不支持 audio 元素。</audio>
-        </div>
-       
-
-            <!-- 4. Image Features -->
-            <div class="uk-container uk-container-center container uk-margin-bottom uk-margin-medium-top">  
-                <h3 id="4" class="uk-margin-bottom uk-margin-medium-top"  style="font-size: 30px;">4. Image Features (OpenFace 2.0)</h3>
-     
-            <div class="uk-grid-small uk-margin-bottom uk-margin-medium-top" uk-grid>
-                <div class="uk-width-1-1 uk-width-1-3@m uk-first-column">
-                    <div class="video2" style="height: 560px; overflow: hidden;">
-                        <iframe width="315" height="560" src="https://youtube.com/embed/pEoT62T31Ig" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            <h3 id="text-features" class="uk-margin-bottom uk-margin-medium-top">2. Text Features (Word Cloud)</h3>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1" uk-lightbox="animation: slide">
+                    <div class="image-container">
+                        <a href="media/text_plot.png" data-caption=""><img src="media/text_plot.png" alt="Text Features Word Cloud"></a>
                     </div>
                 </div>
-                <div class="uk-width-1-1 uk-width-2-3@m" uk-lightbox="animation: slide" style="height: 560px;>
+            </div>
+
+            <h3 id="audio-features" class="uk-margin-bottom uk-margin-medium-top">3. Audio Features (Covarep)</h3>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1" uk-lightbox="animation: slide">
+                    <div class="image-container">
+                        <a href="media/audio_plot.png" data-caption=""><img src="media/audio_plot.png" alt="Audio Features Plot"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="audio">
+                <audio controls controlslist="nodownload">
+                    <source src="media/high empathy case.mp3" type="audio/mpeg">
+                    您的浏览器不支持 audio 元素。
+                </audio>
+            </div>
+
+            <h3 id="image-features" class="uk-margin-bottom uk-margin-medium-top">4. Image Features (OpenFace 2.0)</h3>
+            <div class="uk-grid-small uk-margin-bottom uk-margin-medium-top" uk-grid>
+                <div class="uk-width-1-1 uk-width-1-3@m uk-first-column">
+                     <div class="video">
+                    <iframe src="https://www.youtube.com/embed/NuyD4kjXUFQ?rel=0&si=jdn67QVPrLnHULom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="small-title">(High Authenticity)</div>
+                </div>
+                </div>
+                <div class="uk-width-1-1 uk-width-2-3@m" uk-lightbox="animation: slide" style="height: 560px;">
                     <a href="media/openface.png" data-caption="">
-                        <img src="media/openface.png" alt="" style="height: 100%; object-fit: cover;">
+                        <img src="media/openface.png" alt="OpenFace Image Features" style="height: 100%; object-fit: cover;">
                     </a>
-                </div>      
+                </div>
             </div>
 
 
-            <!-- 多模态附件展示 -->
-            <h3 class="uk-margin-bottom uk-margin-medium-top">1. The 8 video stimuli in Study 2 (Ancillary Field Experiment with AI-generated Videos)</h3>
-     
-            
+            <style>
+                h3 {
+                    font-weight: bold;
+                }
+            </style>
+            <h3 id="4" class="uk-margin-bottom uk-margin-medium-top" style="font-size: 30px;"> </h3>
+            <p style="text-align: left; font-size: 24px; color: black; font-family: 'Times New Roman', Times, serif;">
+              <strong> 5. The 8 video stimuli in Study 2 (Ancillary Field Experiment with AI-generated Videos) </strong>
+            </p>
+
             <div class="info">
-                <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                    <p style="font-size:24px;"><strong>Video 1</strong></p>
+                <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                    <p style="font-size:20px;"><strong>Video 1</strong></p>
                 </h5>
                 <div class="item"><span>Credible text message: </span>high</div>
                 <div class="item"><span>Deceptive voice: </span>yes</div>
@@ -464,9 +206,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 2</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 2</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -475,17 +216,16 @@
             </div>
             <div class="col2">
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yhrOE_9iMUk?rel=0&si=QJpmvo45V-FxOeFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cXWMNHa0Y84?rel=0&si=Gr_Q4yBgbLsJ7C46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(English version)</div>
                 </div>
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cwIqfx9fIB8?rel=0&si=X0Lijd7rK5k2qwV3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0_tgsIOwoKQ?rel=0&si=QlanCPEKQ1giLWcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 3</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 3</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -502,9 +242,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 4</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 4</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -513,17 +252,16 @@
             </div>
             <div class="col2">
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MclLQq41DDQ?rel=0&si=ZvuMKMNWVo33ueb3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qJQVD6VQAF4?rel=0&si=h-0_3CkmnX480emu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(English version)</div>
                 </div>
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QQwF0PSS-gU?rel=0&si=DADLkxVBERw50A1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ctDFJkiwgKA?rel=0&si=Rjs0EbqHSmz20JHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 5</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 5</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -540,9 +278,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 6</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 6</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -551,17 +288,16 @@
             </div>
             <div class="col2">
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RaL8RnBxEvY?rel=0&si=MZr5RETWb7fTvlVR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6NczPfz2mlA?rel=0&si=zwzzWaax6ynmrLKO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(English version)</div>
                 </div>
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mShyTTRlXX0?rel=0&si=AiyHKMgrbY8cAEiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oylrIVyaepE?rel=0&si=FwGrQYzQUqxOnIkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 7</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 7</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -578,9 +314,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 8</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 8</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -589,22 +324,27 @@
             </div>
             <div class="col2">
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/P28MKgtQQXg?rel=0&si=_MGezwgDu5S82kR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9-eD-V4BKJI?rel=0&si=Sx1_kj0Hr6nEUUSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(English version)</div>
                 </div>
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tEyCa3S_V7w?rel=0&si=AIpeaqEMeHixkbRb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/crrthyQVecY?rel=0&si=cv-Ey-vTsyGKlpKi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
             <!-- 多模态附件展示2 -->
-            <h3 class="uk-margin-bottom uk-margin-medium-top">2. The 16 video stimuli in Study 3 (Online Experiment with AI-generated Videos)</h3>
-        
-
+            <style>
+                h3 {
+                    font-weight: bold;
+                }
+            </style>
+            <h3 id="4" class="uk-margin-bottom uk-margin-medium-top" style="font-size: 30px;"> </h3>
+            <p style="text-align: left; font-size: 24px; color: black; font-family: 'Times New Roman', Times, serif;">
+            <strong> 6. The 16 video stimuli in Study 3 (Online Experiment with AI-generated Videos) </strong>
+            </p>
             <div class="info">
-                <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                    <p style="font-size:24px;"><strong>Video 1</strong></p>
+                <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                    <p style="font-size:20px;"><strong>Video 1</strong></p>
                 </h5>
                 <div class="item"><span>Credible text message: </span>high</div>
                 <div class="item"><span>Deceptive voice: </span>yes</div>
@@ -621,9 +361,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 2</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 2</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -641,9 +380,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 3</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 3</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -661,9 +399,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 4</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 4</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -681,9 +418,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 5</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 5</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -701,9 +437,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 6</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 6</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -721,9 +456,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 7</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 7</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -741,9 +475,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 8</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 8</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>high</div>
@@ -761,9 +494,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 9</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 9</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -781,9 +513,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 10</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 10</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -801,9 +532,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 11</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 11</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -821,9 +551,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 12</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 12</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -841,9 +570,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 13</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 13</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -861,9 +589,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 14</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 14</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -881,9 +608,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 15</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 15</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -901,9 +627,8 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
-            <h5 class="title uk-margin-bottom uk-margin-medium-top">
-                <p style="font-size:24px;"><strong>Video 16</strong></p>
+            <h5 id="2" class="title uk-margin-bottom uk-margin-medium-top">
+                <p style="font-size:20px;"><strong>Video 16</strong></p>
             </h5>
             <div class="info">
                 <div class="item"><span>Credible text message: </span>low</div>
@@ -921,10 +646,9 @@
                     <div class="small-title">(Chinese version)</div>
                 </div>
             </div>
-
             <!-- 返回顶部按钮 -->
             <a href="" uk-totop class="totop" uk-scroll><span uk-icon="top"></span></a>
         </div>
     </div>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9731a1596858c62f',t:'MTc1NTg1Nzk0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
