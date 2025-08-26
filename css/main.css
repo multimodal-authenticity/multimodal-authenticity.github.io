@@ -10,7 +10,7 @@ body{
   font-display: swap;
 }
 .uk-container{
-  max-width: 1080px;
+  max-width: 780px;
 }
 a{
   color: #111;
@@ -101,7 +101,7 @@ video{
   margin: auto;
 }
 .video iframe{
-  width: 350px;
+  width: auto;
   height: 600px;
   border-radius: 8px;
   margin: auto;
