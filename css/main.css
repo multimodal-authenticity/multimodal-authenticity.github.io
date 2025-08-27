@@ -10,10 +10,10 @@ body{
   font-display: swap;
 }
 .uk-container{
-  max-width: 648px;
+  max-width: 850px;
   /* border: 1px solid #ddd; */
 }
-a{
+a{648
   color: #111;
 }
 a:hover{
