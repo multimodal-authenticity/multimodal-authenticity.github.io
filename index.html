@@ -207,7 +207,7 @@
                             <audio controls=""><source src="media/high-agreeableness.mp3" controlslist="nodownload">您的浏览器不支持 audio 元素。</audio>
                         </div>
                     </div>
-        <!-- 必需的 CSS 样式（与页面其他部分保持一致） -->
+     <!-- 必需的 CSS 样式（与页面其他部分保持一致） -->
 <style>
     .col2 {
         display: flex;
@@ -226,6 +226,13 @@
         aspect-ratio: 9/16;
         height: auto;
     }
+    .col2 .video a img {
+        width: 100%;
+        max-width: 315px;
+        aspect-ratio: 9/16;
+        height: auto;
+        object-fit: cover;
+    }
     .small-title {
         margin: 10px 0;
         font-size: 18px;
@@ -238,6 +245,25 @@
         }
     }
 </style>
+
+<!-- 4. 图像特征（OpenFace 2.0） -->
+<div class="uk-container uk-container-center container uk-margin-bottom uk-margin-medium-top">
+    <h3 id="section4" class="uk-margin-bottom uk-margin-medium-top" style="font-size: 22px;">4. Image Features (OpenFace 2.0)</h3>
+    <div class="col2">
+        <!-- YouTube 视频 -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/V1FOctZ77l4?rel=0&si=fUrOICrPh9DXrkCl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="small-title">(Video)</div>
+        </div>
+        <!-- 图像 -->
+        <div class="video">
+            <a href="media/openface.png" data-caption="" uk-lightbox="animation: slide">
+                <img src="media/openface.png" alt="">
+            </a>
+            <div class="small-title">(Image)</div>
+        </div>
+    </div>
+</div>
 
 <!-- 4. 图像特征（OpenFace 2.0） -->
 <div class="uk-container uk-container-center container uk-margin-bottom uk-margin-medium-top">
