@@ -106,6 +106,49 @@ video{
   border-radius: 8px;
   margin: auto;
 }
+.stimulus-player {
+  width: 100%;
+  max-width: 225px;
+  margin: auto;
+}
+.col2 .video:has(.stimulus-player) {
+  min-width: 0;
+}
+.stimulus-cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #161616;
+  cursor: pointer;
+}
+.stimulus-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.stimulus-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, .78);
+  color: white;
+  font-size: 22px;
+}
+.stimulus-cover:hover .stimulus-play,
+.stimulus-cover:focus-visible .stimulus-play {
+  background: #000;
+}
+.stimulus-player iframe {
+  display: block;
+}
 .large-title{
   font-size: 42px;
   font-family: times;
