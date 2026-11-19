@@ -1,3 +1,17 @@
+document.addEventListener('click', function (event) {
+	const cover = event.target.closest('.stimulus-cover');
+	if (!cover) return;
+
+	const template = cover.nextElementSibling;
+	const player = template.content.firstElementChild.cloneNode(true);
+	const url = new URL(player.src);
+	url.searchParams.set('autoplay', '1');
+	player.src = url.href;
+	cover.replaceWith(player);
+	template.remove();
+	player.focus();
+});
+
 $(function() {
 
 	var search = $('#search'),
