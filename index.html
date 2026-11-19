@@ -119,6 +119,39 @@
         text-align: center;  /* ✅ 居中对齐 */
         margin-top: 10px;    /* ✅ 保持与上方间距 */
       }
+      .research-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 22px auto 2px;
+      }
+      .research-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-sizing: border-box;
+        width: 116px;
+        min-height: 44px;
+        padding: 8px 14px;
+        border: 1px solid #d0d5db;
+        border-radius: 24px;
+        background: #fff;
+        color: #202832;
+        font: 600 15px/1.25 system-ui, sans-serif;
+        text-decoration: none;
+      }
+      .research-links a:hover,
+      .research-links a:focus-visible {
+        border-color: #333f4b;
+        background: #25313d;
+        color: #fff;
+      }
+      .research-links a:focus-visible {
+        outline: 2px solid #25313d;
+        outline-offset: 3px;
+      }
     </style>
 <!-- 主标题 -->
 <div class="large-title">
@@ -128,9 +161,9 @@
 <div class="large-title1">
       How and When Authenticity Sells in Social Media Influencer Marketing
     </div>
-<nav class="uk-flex uk-flex-center uk-flex-wrap uk-margin-top" aria-label="Research resources">
-<a class="uk-button uk-button-default uk-margin-small-right uk-margin-small-bottom" href="https://github.com/multimodal-authenticity/multimodal-authenticity"><span uk-icon="icon: github" aria-hidden="true"></span> Code</a>
-<a class="uk-button uk-button-default uk-margin-small-bottom" href="https://drive.google.com/drive/folders/1obcRpOnTbqu2M0_orEyzQHelAOyivFjw"><span uk-icon="icon: database" aria-hidden="true"></span> Data</a>
+<nav class="research-links" aria-label="Research resources">
+<a href="https://github.com/multimodal-authenticity/multimodal-authenticity"><span uk-icon="icon: github; ratio: 0.85" aria-hidden="true"></span>Code</a>
+<a href="https://drive.google.com/drive/folders/1obcRpOnTbqu2M0_orEyzQHelAOyivFjw"><span uk-icon="icon: database; ratio: 0.85" aria-hidden="true"></span>Data</a>
 </nav>
 </div>
 </div>
